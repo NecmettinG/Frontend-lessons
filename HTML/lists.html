@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+</head>
+
+<body>
+
+    <h3>Unordered List</h3>
+    <ul> <!--This is an unordered list. It is used to create a list of items without any specific order. No numbers or letters sequential.-->
+        <li>CPU</li>
+        <li>GPU</li>
+        <li>I/O Devices 
+            <!--This is a nested list. It is used to create a list of items inside another list. There will be a nested list under the I/O Devices.-->
+            <ul>
+                <li>Keyboard</li>
+                <li>Mouse</li>
+                <li>Monitor</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Ordered List</h3>
+    <ol> <!--This is an ordered list. It is used to create a list of items with a specific order. Numerical by default.-->
+        <li>Press the ON button of computer.</li>
+        <li>Wait for the operating system to load.</li>
+        <li>Enter your password.</li>
+    </ol>
+
+    <h3>Ordered List With Letters</h3>
+    <ol type="A"> <!--type parameter is for choosing the order if it is numerical or letter etc. It is currently letter with uppercase.-->
+        <li>Open the browser</li>
+        <li>Open the game</li>
+        <li>Watch video</li>
+        <li>Listen music</li>
+    </ol>
+
+    <h3>Definitive List (Similar to dictionary)</h3>
+    <dl> <!--This is a definitive list. It is used to create a list of items with their definitions or descriptions.-->
+        <dt>CPU</dt> <!--This is a definition term. It is used to define an item in the definitive list.-->
+        <dd>Central Processing Unit. It handles processes of the computer.</dd> <!--This is a definition description. 
+        It is used to describe the item defined in the definition term.-->
+        
+        <dt>RAM</dt>
+        <dd>Random Access Memory. Volatile data will take place in there.</dd>
+    </dl>
+    
+</body>
+</html>
