@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+
+<body>
+
+    <h3>Shift Hours</h3>
+
+    <!--This is the block of the table. bgcolor parameter means background color and it is working as the edges of the table.-->
+    <!--The width parameter is used to set the width of the table. It is the summation of the first rows widths.-->
+    <table bgcolor="black" width="700">
+
+        <!--This is the first row of the table. It is used to create the header of the table. tr means table row. We created two rows.-->
+        <!--The th element is used to create a header cell. It is used to create the header of the table. (Columns basically. table header.)-->
+        <!--text inside of the th element will be bold.-->
+        <!--The width parameter is used to set the width of the header cells.-->
+        <!--The bgcolor parameter is used to set the background color of the header cells.-->
+        <tr bgcolor="red">
+            <th width="100">Monday</th>
+            <th width="100">Tuesday</th>
+            <th width="100">Wednesday</th>
+            <th width="100">Thursday</th>
+            <th width="100">Friday</th>
+            <th width="100">Saturday</th>
+            <th width="100">Sunday</th>
+        </tr>
+
+        <!--This is the second row of the table. It is used to create the body of the table. 
+        From now on, all other rows are just values for the table. They are not headers.-->
+        <!--The align parameter is used to set the alignment of the text inside of the cells. center means values will be centered in position.-->
+        <!--bgcolor is grey which means these values' cells will be grey.-->
+        <!--td means table definition. They are just simply values or definitions for the headers(columns.)-->
+        <tr align="center" bgcolor="grey">
+            <td>10 AM-6 PM</td>
+            <td>10 AM-6 PM</td>
+            <td>10 AM-6 PM</td>
+            <td>10 AM-6 PM</td>
+            <td>10 AM-6 PM</td>
+            <td>Closed</td>
+            <td>Closed</td>
+        </tr>
+
+    </table>
+    
+</body>
+</html>
