@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-input</title>
+</head>
+<body>
+    <!--forms are responsible for taking input data from the user.-->
+
+    <!--We created a form element block here. Inside of this block, We are going to take inputs. 
+    Imagine we are taking inputs for a insurance company.-->
+    <!--action parameter is for the backend part. It is used to send the input data to our backend file. 
+    You are going to write your backend's filename inside of action parameter. Since we don't have a backend, we will leave it empty.-->
+    <form action="">
+
+        <!--We created a label element for our first input box. It will appear on the left of the input rectangle and says "Name:".-->
+        <!--for parameter takes the id of the input element and we map the label and the input rectangle.-->
+        <!--We currently mapped our label with the input element with the id called "Name".-->
+        <label for="Name">Name:</label>
+
+        <!--We created an input element. Whenever we open our website, a rectangle box will appear for input.-->
+        <!--type parameter is for the datatype of the input. Currently, it will take text(string.)-->
+        <!--id parameter is for the identification of the input element. It is used to link the label with the input box.-->
+        <!--name parameter is like the variable name of the input element. Whenever we input a data, it will be stored as userName.-->
+        <!--placeholder parameter is for demonstrating a message inside of the input rectangle before we write something inside of it.-->
+        <!--required parameter is for making the input box mandatory. If we do not fill it, we will not be able to submit the form.-->
+        <input type="text" name="userName" id="Name" placeholder="Enter your name" required>
+
+        <!--we will use two br elements between each input elements for seperating them.-->
+        <br>
+        <br>
+
+        <!--Same label-input configuration just like the name input.-->
+        <label for="Surname">Surname:</label>
+        <input type="text" name="userSurname" id="Surname" placeholder="Enter your surname" required>
+
+        <br>
+        <br>
+
+        <!--This label is mapped with password input element.-->
+        <label for="Password">Password:</label>
+
+        <!--This time, we set the type as "password". It is used to take passwords from the user and writings won't be shown directly.
+        Each character will be represented as dots(***).-->
+        <!--We also set the maxlength parameter as 20. It means that we can only write 20 characters at maximum inside of this input rectangle.-->
+        <input type="password" name="userPassword" id="Password" placeholder="Enter your password" maxlength="20" required>
+
+        <br>
+        <br>
+
+        <!--This label is mapped with email input element.-->
+        <label for="Email">Email:</label>
+
+        <!--This time, we set the type as "email". It is used to take email input from the user and the input must include "@somemail.com".-->
+        <input type="email" name="userEmail" id="Email" placeholder="your-mail@gmail.com">
+
+        <br>
+        <br>
+
+        <!--This label is mapped with phone number input element.-->
+        <label for="Phone">Phone Number:</label>
+
+        <!--This time, we set the type as "tel". It is used to take phone number input from the user.-->
+        <input type="tel" name="userPhone" id="Phone" placeholder="(123)-456-7890">
+
+        <br>
+        <br>
+
+        <!--This label is mapped with date input element.-->
+        <label for="BirthDate">Birth Date:</label>
+
+        <!--This time, we set the type as "date". It is used to take date input from the user.-->
+        <!--It will open a calendar and we can select a date from it. There is no need for placeholder because it has a default one(mm/dd/yyyy).-->
+        <input type="date" name="userBirthDate" id="BirthDate">
+
+        <br>
+        <br>
+        
+        <!--This label is mapped with number input element.-->
+        <label for="CarCount">How many cars do you have?</label>
+
+        <!--This time, we set the type as "number". It is used to take number input from the user.-->
+        <!--We also set the min and max parameters. It means that we can only write numbers between 1 and 20 inside of this input rectangle.-->
+        <!--Inside of the number input rectangle, there will be up-down arrows to push for increasing-decreasing the number.-->
+        <input type="number" name="userCarCount" id="CarCount" min="1" max="20">
+
+        <br>
+        <br>
+
+        <!--We created a label for the radio input elements but there is no radio input element with id "Gender". This label won't be mapped.-->
+        <label for="Gender">Gender:</label>
+
+        <!--We created two radio input elements. Radio input elements are used to select one option from multiple options. type parameter is radio.-->
+        <!--We set the name parameter as "userGender" for both of them. It means that we can only select one of them.-->
+        <!--If their name parameter is different, we will be able to select both of them.-->
+
+        <!--This label is mapped with Female radio input element.-->
+        <label for="Female">Female</label>
+        <!--value parameter is the value of the radio input element. If we select this radio input and submit, our backend will receive "FEMALE".-->
+        <input type="radio" name="userGender" id="Female" value="FEMALE">
+        
+        <!--This label is mapped with Male radio input element.-->
+        <label for="Male">Male</label>
+        <!--value parameter is the value of the radio input element. If we select this radio input and submit, our backend will receive "MALE".-->
+        <input type="radio" name="userGender" id="Male" value="MALE">
+
+        <br>
+        <br>
+
+        <label for="CarType">Car Type:</label>
+        <!--select block is for creating a selective menu box.-->
+        <!--Selected option's value will be stored inside of userCarType variable.-->
+        <select name="userCarType" id="CarType">
+
+            <!--option elements are the options of the selective menu box.-->
+            <!--value parameter is the value of the option element. If we select this option and submit, our backend will receive "REGULAR".-->
+            <option value="REGULAR">Regular</option>
+
+            <option value="SPORT">Sport</option>
+            <option value="COMMERCIAL">Commercial</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label for="ExistedInsurance">Do you already have an insurance at least one of your cars?</label>
+
+        <!--This is a checkbox input element. Whenever we click this checkbox and submit, userExistedInsurance variable will store YES. 
+        Backend will receive YES.-->
+        <input type="checkbox" name="userExistedInsurance" id="ExistedInsurance" value="YES">
+
+        <br>
+        <br>
+
+        <!--This label is mapped with the textarea element.-->
+        <label for="AdditionalInformation">Additional Information:</label>
+
+        <!--I put a br here because our label must be on above of textarea box.-->
+        <br>
+
+        <!--This is a textarea element. It is used to take long text inputs from the user.-->
+        <!--cols parameter is for the width of the textarea. It means that it will take 15 characters at maximum in a row.-->
+        <!--rows parameter is for the height of the textarea. It means that it will take 5 rows at maximum.-->
+        <!--But we can adjust the size of our textarea with our mouse.-->
+        <!--userAdditionalInformation variable will store that long text input.-->
+        <textarea name="userAdditionalInformation" id="AdditionalInformation" cols="40" rows="5"></textarea>
+
+        <br>
+        <br>
+
+        <label for="Photo">Your Photo:</label>
+        <!--This is a file input element. It is used to take files from the user.-->
+        <!--accept parameter is for the extension of the file. We can only send .jpg files.-->
+        <!--Whenever we select a file and submit, userPhoto variable will store that file.-->
+        <input type="file" name="userPhoto" id="Photo" accept=".jpg">
+
+        <br>
+        <br>
+
+        <!--This input element is different type(reset). 
+        A button called "Reset" will appear on the website.
+        Imagine we typed something inside of input rectangles. Whenever we press Reset button, it will reset the input rectangles.-->
+        <!--We achieve this with setting the type parameter as "reset".-->
+        <input type="reset">
+
+        <!--This time, we set the type as "submit". A button called "Submit" will appear on the website.-->
+        <!--Whenever we press this button, the inputs will be submitted to our backend part.-->
+        <input type="submit">
+
+    </form>
+    
+</body>
+</html>
