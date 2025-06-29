@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+</head>
+
+<!--In this html file, We also used some javascript-script block.-->
+
+<body>
+
+    <!--Whenever we click to "YouTube" button, We will be redirected to YouTube main page in a new tab.-->
+    <a href="https://www.youtube.com" target="_blank">
+
+        <!--This is a button element and we also used CSS for better looking. It will be written "YouTube" on the button.-->
+        <!--Button color will be red and YouTube text will be in aliceblue color(whitish color).
+        Borders-corners won't be sharp due to border-radius parameter. It will be kinda elliptic.-->
+        <button style="background-color: red; color:aliceblue; border-radius: 5px;">YouTube</button>
+    </a>
+
+    <!--two br for seperating two buttons.-->
+    <br>
+    <br>
+    
+    <!--If we want to add more functionality to buttons, We have to use javascript and script block!-->
+
+    <!--We created another button element called "Click here!" but we have a new parameter called onclick. This is for javascript functionality.
+    When we press this button, the function called buttonClicked() in the script block will be executed!-->
+    <button onclick="buttonClicked()" style="background-color: blue; color: aliceblue;">Click here!</button>
+
+    <!--We also created a paragraph element with id called text.-->
+    <p id="text">Click to the blue button.</p>
+    
+    <!--This is the script block of our html file and this block is responsible for javascript codes. We can write javascript functions etc.-->
+    <script>
+        
+        //This is a function called buttonClicked. It will be executed when we click the blue button.
+        function buttonClicked(){
+            
+            //Whenever we click the blue button, the paragraph element with id "text" will be changed.
+            //The text inside the paragraph will be changed to "You clicked the blue button!".
+            //We used document.getElementById() to get the paragraph element and then we changed its innerHTML property.
+            //innerHTML is used to change the content of an HTML element.
+            //getElementById("text") takes the id called "text" which is our paragraph element.
+            document.getElementById("text").innerHTML = "You clicked the blue button!";
+        }
+    </script>
+</body>
+</html>
