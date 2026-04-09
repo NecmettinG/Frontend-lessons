@@ -1,0 +1,198 @@
+Semantic HTML
+
+Instead of using divs for everything (Which is non-semantic):
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<div class="header"></div>
+<div class="menu"></div>
+<div class="content"></div>
+<div class="footer"></div>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We can use semantics elements for better readability and accessibility.
+Semantic HTML helps browsers, search engines, and developers understand the structure of a webpage.
+
+Semantic Example:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<header></header>
+<nav></nav>
+<main></main>
+<footer></footer>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--<header> element: represents introductory content
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<header>
+  <h1>My Website</h1>
+</header>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--<nav> element: Navigation. Contains navigation links.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--<section> element: Represents a thematic grouping of content.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<section>
+  <h2>About Me</h2>
+  <p>I am learning frontend development.</p>
+</section>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--<article> element: Represents independent content.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<article>
+  <h2>Blog Post</h2>
+  <p>This is a blog article.</p>
+</article>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--<footer> element: Represents the bottom part of a webpage.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<footer>
+  <p>Copyright 2026</p>
+</footer>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Semantic elements help create a cleaner and more meaningful structure! Don't use too many divs!
+
+
+Semantic HTML, sayfanın yapısını daha anlamlı ve düzenli hale getiren etiketlerdir.
+Bu etiketler hem SEO hem de erişilebilirlik açısından önemlidir.
+
+*header: Sayfanın üst kısmı.
+*nav: menü/navigasyon
+*main: ana içerik
+*section: içerik bölümü
+*article: bağımsız içerik
+*footer: sayfanın alt kısmı.
+
+Bunlar sayesinde kod daha düzenli olur.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+HTML Tag vs Element:
+
+<h1> </h1> --> HTML Tag. Tags are used to mark the beginnig and end of an element
+
+
+<h1>Hello Word</h1> --> HTML Element. An element includes the opening tag, content and closing tag
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+HTML Attributes:
+
+Attributtes provide additional information about elements
+
+<a href="https://github.com">Visit GitHub</a>
+
+<a>: Anchor tag.
+
+href: an attribute that is for hyperlink
+
+"https://github.com" → value of hyperlink attribute(href)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+HTML Document Structure:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Page</title>
+</head>
+
+<body>
+
+    <h1>Hello World</h1>
+    <p>This is my first HTML page.</p>
+
+</body>
+</html>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+<!DOCTYPE html>: This tells browser that this document is written with HTML 5.
+
+<html></html>: This is the root element of the page. Everything inside the webpage is written inside of <html> element.
+
+<head></head>: The head section constains information about the page like titles, meta tags, styles, scripts.
+
+<title></title>: the title appears in the browser tab.
+
+<body></body>: Body section. This is where the visible content of the page is included.
+Examples of elements inside the body:
+        -headings
+        -paragraphs
+        -images
+        -links
+        -lists
+        -buttons
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Headings and Paragraphs in HTML:
+
+Headings and paragraphs are used to structure text content on a web page.
+They help organize information and improve readability.
+
+--Headings:
+
+HTML provides six levels of headings.
+
+They range from <h1> to <h6>.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<h1>Main Title</h1>
+<h2>Section Title</h2>
+<h3>Subsection</h3>
+<h4>Small Heading</h4>
+<h5>Smaller Heading</h5>
+<h6>Smallest Heading</h6>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There should usually be only one <h1> per page because it represents the main topic!
+
+--Paragraphs:
+
+Paragraphs are created using the <p> tag:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<p>this is a paragraph</p>
+<p>this a another paragraph</p>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Browser automatically add space between paragraphs!
+
+
+--Line Break:
+
+The <br> tag is used created a line break:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<p>Hello<br>World</p>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Output will be:
+Hello
+World
+
+
+--Horizontal Line:
+
+the <hr> tag creates a horizontal line that seperates content:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<h1>Hello</h1>
+<hr>
+<p>Welcome to my website.</p>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+There will be a horizontal line between "Hello" heading and "Welcome to my website" paragraph.
+
+NOTE: Using headings is not only for styling, headings should represent content hierarchy, not just text size!
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
