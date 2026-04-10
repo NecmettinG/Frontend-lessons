@@ -1,0 +1,99 @@
+There are three types of CSS addition:
+
+*Inline CSS
+
+*Internal CSS
+
+*External CSS
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+--Inline CSS:
+CSS is written inside of HTML tag directly:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<p style="color: red;">Hello World</p> (style parameter takes CSS properties.)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+--Internal CSS: 
+CSS codes are written inside of HTML's head block:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<style>
+
+p {
+    color: blue;
+}
+</style> (this block will be inside of head block.)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+--External CSS:
+CSS codes will be written inside of a seperate file and will be linked to HTML file.
+
+HTML link will be created like this:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<link rel="stylesheet" href="style.css">
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------------------------------------------------------------------------------------------------------------
+CSS Selectors:
+
+CSS selectors are used for styling selected HTML element.
+
+
+--Element Selector:
+
+It selects particular HTML element:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+p{
+    color: blue; //changes p tags' text color into blue.
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--Class Selector:
+
+Selects elements with particular class:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<style>
+
+.title{
+    color=red;
+}
+</style>
+
+<h1 class="title"> Hello World </h1> //This h1 element uses "title" class to change "Hello World"'s text- 
+-color to red.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--ID Selector:
+
+Selects elements with particular ID:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<style>
+
+#header{
+    background=black;
+}
+</style>
+
+<div id="header"></div>//This code changes the background color of the div element that has "header" id-
+ ,to black.  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+CSS Box Model:
+
+Every HTML element acts like a box. This Box Model allows us to adjust spaces and layout.
+
+Box Model contains 4 parts:
+
+--Content: The area that includes the content.
+
+--Padding: The space between content and border.
+
+--Border: The border of the box.
+
+--Margin: The outer space between boxes.
+
+You can see the example photo in this folder!!
+
+An element's total size = Content + Padding + Border + Margin
