@@ -98,6 +98,36 @@ button:hover {
 
 <button>Hover me!</button>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--Display Property:
+
+The display property specifies the display behavior of an element on the webpage.
+Common values include block, inline, inline-block, flex, and none.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<style>
+
+.hide-me {
+    display: none; /* Hides the element completely from the document */
+}
+
+.block-box {
+    display: block; /* Element takes up the full width available, starting on a new line */
+}
+
+.inline-box {
+    display: inline; /* Element takes up only necessary width, does not start on a new line */
+}
+
+.flex-container {
+    display: flex; /* Enables a flexible layout for child elements */
+}
+</style>
+
+<div class="hide-me">This text is hidden.</div>
+<span class="block-box">This span acts like a block element now.</span>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 CSS Box Model:
@@ -540,3 +570,202 @@ Common Beginner Mistakes
 ❌ Using fixed widths instead of flexible layouts
 
 Responsive design should prioritize mobile-first development.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+# Other Common CSS Properties:
+
+Here are some additional useful CSS properties for styling text, layout, and visual effects used frequently.
+
+
+--Font Properties (font-size & font-family):
+
+The font-size property sets the size of the text.
+The font-family property specifies the font for an element.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+p {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--Text Decoration:
+
+The text-decoration property adds or removes decorations from text. It is mostly used to remove default underlines from links.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+a {
+    text-decoration: none; /* Removes the default underline from hyperlinks */
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--Border Radius:
+
+The border-radius property is used to add rounded corners to an element's border.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.box {
+    border-radius: 8px; /* Rounds the corners of the box */
+    border-radius: 50%; /* Makes a perfect circle if the box is a square */
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--Box Shadow:
+
+The box-shadow property attaches one or more shadows to an element. 
+Values generally include: X offset, Y offset, blur radius, spread radius, and color.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow behind the card */
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--Transition:
+
+The transition property allows you to change element property values (like color or size) smoothly over a given duration.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.button {
+    background-color: blue;
+    transition: background-color 0.3s ease; /* Changes background color smoothly over 0.3s */
+}
+
+.button:hover {
+    background-color: green; 
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--Transform:
+
+The transform property applies a 2D or 3D transformation to an element. Useful functions include translate (move), scale (resize), and rotate.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.card:hover {
+    transform: translateY(-5px); /* Moves the element 5 pixels up vertically */
+    transform: scale(1.05); /* Scales the element's size to 105% */
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--Flex Wrap:
+
+By default, flex items will all try to fit onto one line. The flex-wrap property allows items to wrap onto multiple lines as needed.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows flex items to break onto a new line if there is no space */
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--List Style Type:
+
+The list-style-type property specifies the type of list-item marker for lists (like <ul> or <ol>).
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ul.custom-list {
+    list-style-type: none; /* Removes all default bullet points from an unordered list */
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--Universal Selector (*):
+
+The asterisk (*) is the universal selector. It selects all elements on the page. It's mostly used to reset default margins, paddings, and set border-box sizing.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--CSS Variables (Custom Properties):
+
+CSS Variables allow you to store values (like colors or sizes) and reuse them throughout the document. They are declared in the `:root` pseudo-class and accessed using the `var()` function.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:root {
+    --primary-color: #8b5cf6;
+    --bg-dark: #0f172a;
+    --radius-md: 18px;
+}
+
+button {
+    background-color: var(--primary-color);
+    border-radius: var(--radius-md);
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--Viewport Units (vh & vw):
+
+Viewport units size elements relative to dimensions of the browser window.
+`vh` stands for viewport height (100vh = 100% of the screen height).
+`vw` stands for viewport width (100vw = 100% of the screen width).
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.hero-section {
+    min-height: 100vh; /* Ensures the section takes up at least the full height of the screen */
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--CSS Gradients:
+
+Instead of solid colors, you can use gradients to create a smooth transition between two or more colors. The two most common types are `linear-gradient` and `radial-gradient`.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.button {
+    background: linear-gradient(135deg, #8b5cf6, #06b6d4); /* Transitions from purple to blue at an angle */
+}
+
+.background {
+    background: radial-gradient(circle at center, #ffffff, #000000); /* Circular transition */
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--Backdrop Filter (Glassmorphism):
+
+The `backdrop-filter` property applies graphical effects such as blurring or color shifting to the area behind an element. Frequently used with a semi-transparent background to create a "glass" effect.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.glass-panel {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px); /* Blurs whatever is behind this panel */
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--Pseudo-elements (::placeholder):
+
+A CSS pseudo-element is used to style specified parts of an element. For instance, `::placeholder` styles the placeholder text of an input field.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+input::placeholder {
+    color: #cbd5e1; /* Changes the color of the placeholder text */
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+--Grid Shorthand (place-items):
+
+`place-items` is a shorthand property in Grid (and Flexbox) that aligns items both horizontally and vertically at the same time.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.center-box {
+    display: grid;
+    place-items: center; /* Centers content both vertically and horizontally taking minimum code */
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
